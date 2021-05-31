@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="refresh" content="1;URL=https://walkofpain.github.io/library/movies" />
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=0"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="/assets/fonts/alegreya-sans/400.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="/assets/fonts/alegreya-sans/700.woff2" as="font" type="font/woff2">
+  <title>Таймлайн · walkofpain.</title>
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Главная">
+  <meta property="og:description" content="">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=07824d33e2"><link rel="stylesheet" href="/index.css?v=74f07e9b0a">
+  <link rel="alternate" hreflang="en" href="https://andreyromanov.com">
+  <script defer="" src="/assets/scripts/focus-visible.min.js"></script>
+</head>
+<body>
+  <div class="page">
+  <header class="header header_home page__header">
+  <div class="header__title">
+  <a class="link link_unstyled" href="/">walkofpain.</a> 
+  </div>
+  <nav>
+    <ul class="navigation">
+      <li class="navigation__item">
+        <a class="link link_active" href="/">Таймлайн</a>
+      </li>
+      <li class="navigation__item">
+        <a class="link" href="/">Фильмы</a>
+      </li>
+      <li class="navigation__item">
+        <a class="link" href="/library/tv-shows">Сериалы</a>
+      </li>
+      <li class="navigation__item">
+        <a class="link" href="/library/books">Книги</a>
+      </li>
+      </ul>
+      </nav>
+  </header>
+<main class="page__content">
+  <div class="page-home">
+<main class="page__content"><h2>Таймлайн</h2>
+<section>
+        <p>Визуализация длительности жизни. Каждая клетка — одна неделя. В строке 52 недели, или 1 год. Прошедшие недели автоматически закрашиваются.</p><div data-timeline-target="" class="timeline"></div><noscript>Таймлан не работает без JavaScript</noscript><script>(function() {
+  'use strict';
+  var birthDate = new Date('1997-08-12');
+  var now = new Date();
+  var weeksInYear = 52;
+  var week = 1000 * 60 * 60 * 24 * 7;
+  var passedWeeks = (now - birthDate) / week;
+
+  function renderWeek(number) {
+    var node = document.createElement('div');
+
+    node.classList.add('timeline__week');
+
+    if (number <= passedWeeks) {
+      node.classList.add('timeline__week_passed');
+    }
+
+    return node;
+  }
+
+  function renderTimeline(targetNode) {
+    for (var week = 1; week <= weeksInYear * 80; week++) {
+      targetNode.appendChild(renderWeek(week));
+    }
+  }
+
+  window.addEventListener('load', function() {
+    renderTimeline(document.querySelector('[data-timeline-target]'));
+  });
+})();</script></section></aside></div></main><footer class="footer page__footer">
+  <p>© 2020, <a rel="me" href="https://andrew-r.ru">andrew-r.ru</a> thx</footer></div><style>@font-face {
+        font-family: 'Fira Code';
+        src: local('Fira Code'),
+        url('/assets/fonts/fira-code/regular.woff2'),
+        url('/assets/fonts/fira-code/regular.woff');
+        font-weight: 400;
+        font-display: swap;
+      }</style></body></html>
