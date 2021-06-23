@@ -1,2 +1,2 @@
-# walkofpain.github.io
+# etonepomojet.github.io
 Для себя
