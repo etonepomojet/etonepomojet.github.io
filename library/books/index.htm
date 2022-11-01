@@ -10,6 +10,14 @@
   <meta property="og:description" content="">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=07824d33e2"><link rel="stylesheet" href="/index.css?v=74f07e9b0a">
   <script defer="" src="/assets/scripts/focus-visible.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  
+  $('.acc_head').on('click',function(){
+    $(this).siblings('.acc_body').slideToggle();
+})
+</script>
+  
 </head>
 <body>
   <div class="page">
@@ -35,7 +43,7 @@
     <h1>Книги</h1>
     <p class="subtitle">Лог прочитанных мной книг</p>
 
-<section id="2020 (4)"><h2>2021 (2)</h2><table class="dated-table"><tbody>
+<section id="2021"><h2 class='acc_head'>2021 (2)</h2><table class="dated-table"><tbody class="acc_body>
 
 <tr><td><time datetime="2019-12-08T00:00:00.000Z">Янв, 2021</time></td><td>Мартин Иден, Джек Лондон</a><p></p></td></tr>
 <tr><td><time datetime="2019-12-08T00:00:00.000Z">Янв, 2021</time></td><td>Белый клык, Зов предков, Джек Лондон</a><p></p></td></tr>
