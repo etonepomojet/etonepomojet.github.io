@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Вопросы для свидания</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #fdf6e3;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+
+  #container {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  /* Верхний блок с уже заданными вопросами */
+  #asked-questions {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  #asked-questions ol {
+    padding-left: 20px;
+    margin: 0;
+  }
+  #asked-questions li {
+    margin-bottom: 4px;
+  }
+
+  /* Текущий вопрос */
+  #current-question {
+    font-size: 22px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    min-height: 120px;
+  }
+
+  /* Кнопка */
+  button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+
+</style>
+</head>
+<body>
+
+<div id="container">
+  <!-- Блок с уже заданными вопросами -->
+  <div id="asked-questions">
+    <ol id="question-list"></ol>
+  </div>
+
+  <!-- Текущий вопрос -->
+  <div id="current-question">Нажми "Следующий вопрос", чтобы начать</div>
+
+  <!-- Кнопка -->
+  <button onclick="nextQuestion()">Следующий вопрос</button>
+</div>
+
+<script>
+  const questions = [
+    "Есть ли среди твоих любимых занятий что-то необычное, что приносит тебе колоссальное удовольствие, но может быть непонятным для других?",
+    "Для тебя важно уединение? Как часто тебе нужно быть в одиночестве и проводить время наедине с собой?",
+    "Что ты делаешь, когда тебе скучно?",
+    "Что бы ты хотела, чтобы я у тебя спросил?",
+    "Что мне на самом деле стоит о тебе знать?",
+    "Как думаешь, какие три черты у нас с тобой общие?",
+    "Что способно растрогать тебя до слез?",
+    "Какое твое самое счастливое детское воспоминание?",
+    "Что для тебя самое важное в жизни?",
+    "Какой самый забавный комплимент тебе когда-либо делали?",
+    "Опиши себя в трех словах?",
+    "Что тебе мешает выражать свои истинные чувства?",
+    "О чем будешь жалеть, если не решишься сделать это в ближайшем будущем?",
+    "Возможна ли дружба между мужчиной и женщиной?",
+    "В каких случаях ты чувствуешь ограничение своей свободы в отношениях?",
+    "С каким мужчиной ты бы никогда не стала начинать отношения?",
+    "Какие качества или поступки способны тебя оттолкнуть?",
+    "Без чего, на твой взгляд, невозможно построить успешные отношения?",
+    "Какие отношения были для тебя самыми поучительными и почему?",
+    "Что заставило тебя уйти из прошлых отношений?",
+    "Считаешь ли нормальным общаться с бывшими?",
+    "Как ты представляешь себе идеального спутника жизни?",
+    "Что важнее — личные отношения или карьера?",
+    "Какое место в отношениях занимает доверие для тебя?",
+    "Как ты относишься к изменам?"
+  ];
+
+  let current = 0;
+
+  function nextQuestion() {
+    if (current < questions.length) {
+      const question = questions[current];
+      document.getElementById("current-question").textContent = question;
+
+      // Добавляем в список уже заданных вопросов сверху
+      const li = document.createElement("li");
+      li.textContent = question;
+      const list = document.getElementById("question-list");
+      list.appendChild(li);
+
+      current++;
+    } else {
+      document.getElementById("current-question").textContent = "Все вопросы заданы!";
+    }
+  }
+</script>
+
+</body>
+</html>
